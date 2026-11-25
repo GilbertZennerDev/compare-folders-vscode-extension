@@ -1,0 +1,48 @@
+{
+  "name": "compare-folders",
+  "displayName": "Compare Folders",
+  "description": "Compare two whole folders byte by byte: see what is only on one side, what differs, and open any difference in the diff editor.",
+  "version": "0.1.0",
+  "publisher": "GilbertZenner",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "compareFolders.compare",
+        "title": "Compare Folders: Compare Two Folders"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0",
+    "@vscode/vsce": "^2.24.0"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "keywords": [
+    "compare",
+    "folders",
+    "directory",
+    "diff",
+    "sync"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GilbertZennerDev/compare-folders"
+  }
+}
